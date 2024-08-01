@@ -1,3 +1,5 @@
+# Credit Risk Classification
+
 ## Overview of the Analysis
 
 The purpose of this analysis is to train and evaluate the performance of a supervised Machine Learning model based on loan risk. More specifically, it's ability to correctly predict labels for healthy loans (0) and unhealthy loans (0), further aiming to identify the credit-worthiness of borrowers. This analysis will utilize a dataset of historical lending activity from a peer-to-peer lending services company, which contains financial data related to loan applications - such as: 
@@ -20,7 +22,7 @@ The stages of the ML process were as follows:
    b) Creating y(target) and X(features) variables from isolated data
    c) Splitting into train and test, selecting 30% of the data as test data
 
-2) Creating and predicting using the LogisticRegression model:
+3) Creating and predicting using the LogisticRegression model:
    a) Fitting the model using LogisticRegression func and save in var ("lending_model")
    b) Saving testing data labels predictions in var ("lend_test_predict")
    c) Populating confusion matrix and classification report
@@ -30,33 +32,41 @@ The stages of the ML process were as follows:
 **Class 0 (healthy loan):**
 
 Precision: 1.00
+
 Recall: 0.99
+
 F1-Score: 1.00
+
 Support: 18,765
 
 **Class 1 (high-risk loan):**
 
 Precision: 0.85
+
 Recall: 0.91
+
 F1-Score: 0.88
+
 Support: 619
 
 **Overall Performance:**
 
 Accuracy: 0.99
-Macro Average:
+
+**Macro Average:**
 
 Precision: 0.92
 Recall: 0.95
 F1-Score: 0.94
-Weighted Average:
+
+**Weighted Average:**
 
 Precision: 0.99
 Recall: 0.99
 F1-Score: 0.99
 Total Support: 19,384
 
-**Summary:**
+## Summary:
 
 As exhibited by the results above, the model performs excellently in predicting healthy loan labels but needs improvement in predicting high-risk loans. The overall performance shows nearly perfect accuracy. However, due to the significant class imbalance, the model is trained predominantly on the majority class (healthy loans), leading to potential overfitting to this class.
 
